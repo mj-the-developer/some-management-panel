@@ -1,0 +1,97 @@
+.admin-marketer-sidebar {
+    .admin-marketer-header {
+        background-color: #2a7f20;
+        color: #fff;
+        padding: 10px 295px 10px 15px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    .sidebar-wrapper {
+        background-color: #28651c;
+        box-shadow: -1px 0 30px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        height: 100vh;
+        overflow-y: auto;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 280px;
+        z-index: 3;
+        @include transition(all 0.4s);
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #ccc;
+            border-radius: 2px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $mainColor;
+            border-radius: 2px;
+        }
+        .navigation {
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            list-style: none;
+            .nav-item {
+                background-color: transparent;
+                border: none;
+                color: #fff;
+                line-height: 2.5rem;
+                outline: none !important;
+                position: relative;
+                .fa {
+                    font-size: 18px;
+                    position: relative;
+                    top: 2px;
+                }
+                a, button {
+                    color: #fff;
+                    display: block;
+                    padding: 0 15px;
+                    position: relative;
+                    @include transition(all 0.4s);
+                    &:hover, &.active {
+                        color: lightgreen;
+                    }
+                    &.has-submenu {
+                        &:after {
+                            content: '\f107';
+                            font-family: FontAwesome;
+                            position: absolute;
+                            left: 15px;
+                            top: 50%;
+                            @include transform(translateY(-50%) rotate(0deg));
+                            @include transition(all 0.4s);
+                        }
+                    }
+                    &.change-icon {
+                        &:after {
+                            @include transform(translateY(-50%) rotate(180deg));
+                        }
+                    }
+                }
+                .menu-content {
+                    display: none;
+                    list-style-type: none;
+                    padding-right: 40px;
+                    .menu-item {
+                        &:hover {
+                            padding-right: 20px;
+                        }
+                    }
+                }
+                .badge {
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                }
+            }
+        }
+    }
+}
