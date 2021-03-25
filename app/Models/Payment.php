@@ -11,6 +11,8 @@ class Payment extends Model
 {
     use HasFactory;
 
+    protected $dateFormat = 'U';
+
     public function poor()
     {
         return $this->belongsTo(Poor::class);

@@ -12,6 +12,8 @@ class Poor extends Model
 {
     use HasFactory;
 
+    protected $dateFormat = 'U';
+
     public function nonCashHelps()
     {
         return $this->hasMany(NonCashHelp::class);
