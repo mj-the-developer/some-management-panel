@@ -569,7 +569,7 @@
 }
 
 .main-content-container {
-  background-color: #3ac144;
+  background-color: #eee;
   min-height: 100vh;
   padding: 87px 295px 15px 15px;
   transition: all 0.4s;
@@ -729,6 +729,24 @@
     max-width: 100% !important;
   }
 
+  .admin-marketer-sidebar .admin-marketer-header {
+    padding: 5px 15px;
+  }
+  .admin-marketer-sidebar .admin-marketer-header h3 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .admin-marketer-sidebar .sidebar-wrapper {
+    right: -280px;
+  }
+  .admin-marketer-sidebar .sidebar-wrapper.active {
+    right: 0;
+  }
+
+  .main-content-container {
+    padding: 67px 15px 15px;
+  }
+
   .navbar-wrapper .mj-nav .navbar-brand {
     margin-left: 0;
   }
@@ -822,24 +840,6 @@
 @media screen and (max-width: 768px) {
   .container {
     max-width: 100% !important;
-  }
-
-  .admin-marketer-sidebar .admin-marketer-header {
-    padding: 5px 15px;
-  }
-  .admin-marketer-sidebar .admin-marketer-header h3 {
-    font-size: 20px;
-    line-height: 40px;
-  }
-  .admin-marketer-sidebar .sidebar-wrapper {
-    right: -280px;
-  }
-  .admin-marketer-sidebar .sidebar-wrapper.active {
-    right: 0;
-  }
-
-  .main-content-container {
-    padding: 67px 15px 15px;
   }
 
   .card-scale .btn-primary {
@@ -1076,6 +1076,11 @@ button:focus {
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.bg-green {
+  background-color: #2a7f20;
+  color: #fff;
 }
 
 /*------------------------------------------------------------------------------
@@ -1358,6 +1363,34 @@ select.form-control {
 input.form-control:focus, textarea.form-control:focus, select.form-control:focus {
   box-shadow: none;
   border: 1px solid #009dff;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+.page-item:last-child .page-link {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.page-item:first-child .page-link {
+  margin-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.alert-dismissible .close {
+  right: initial;
+  left: 0;
+}
+
+.alert-dismissible {
+  padding-right: 1.25rem;
 }
 
 /*------------------------------------------------------------------------------

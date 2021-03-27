@@ -15,20 +15,14 @@
         </div>
         <ul class="navigation">
             <li class="nav-item">
-                <a href="#">
-                    <span class="fa fa-tachometer"></span>
-                    <span class="menu-item mr-1">داشبورد</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#">
+                <a href="{{ route('poors.index') }}">
                     <span class="fa fa-heart"></span>
                     <span class="menu-item mr-1">
-                        نیازمندان
+                        لیست نیازمندان
                     </span>
                 </a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a href="#">
                     <span class="fa fa-money"></span>
                     <span class="menu-item mr-1">
@@ -43,7 +37,7 @@
                         کمک های غیر نقدی
                     </span>
                 </a>
-            </li>
+            </li> --}}
             <li class="nav-item">
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

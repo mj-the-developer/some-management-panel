@@ -26,6 +26,36 @@ input.form-control, textarea.form-control, select.form-control {
     }
 }
 
+.table {
+    td, th {
+        vertical-align: middle;
+    }
+}
+
+.page-item:last-child .page-link {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.alert-dismissible .close {
+    right: initial;
+    left: 0;
+}
+
+.alert-dismissible {
+    padding-right: 1.25rem;
+}
+
 /*------------------------------------------------------------------------------
     Responsive
 ------------------------------------------------------------------------------*/

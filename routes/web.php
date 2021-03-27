@@ -15,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', 'login');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::middleware('auth')->prefix('dashboard')->group(function() {
+    Route::redirect('/', '/dashboard/poors');
+    Route::resource('poors', 'PoorsController')->except('show');
+});
 
 require __DIR__.'/auth.php';
