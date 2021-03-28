@@ -18,6 +18,10 @@ Route::redirect('/', 'login');
 Route::middleware('auth')->prefix('dashboard')->group(function() {
     Route::redirect('/', '/dashboard/poors');
     Route::resource('poors', 'PoorsController')->except('show');
+    Route::prefix('poors/{poor_id}')->group(function() {
+        Route::resource('payments', 'Poors\PaymentsController')->except('show');
+        Route::resource('nch', 'Poors\NonCashHelpsController')->except('show');
+    });
 });
 
 require __DIR__.'/auth.php';

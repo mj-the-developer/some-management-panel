@@ -46,8 +46,14 @@
                         @endif
                     </td>
                     <td>
-                        <a href="{{ route('poors.edit', [ 'poor' => $poor ]) }}" class="btn btn-info btn-sm ml-1">
+                        <a href="{{ route('poors.edit', [ 'poor' => $poor ]) }}" class="btn btn-info btn-sm ml-1 mb-1 mb-xl-0">
                             مشاهده و ویرایش
+                        </a>
+                        <a href="{{ route('payments.index', [ 'poor_id' => $poor->id ]) }}" class="btn btn-warning btn-sm ml-1 mb-1 mb-xl-0">
+                            لیست پرداخت ها
+                        </a>
+                        <a href="{{ route('nch.index', [ 'poor_id' => $poor->id ]) }}" class="btn btn-success btn-sm">
+                            لیست کمک های غیر نقدی
                         </a>
                     </td>
                 </tr>                

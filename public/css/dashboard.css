@@ -738,6 +738,7 @@
   }
   .admin-marketer-sidebar .sidebar-wrapper {
     right: -280px;
+    z-index: 10;
   }
   .admin-marketer-sidebar .sidebar-wrapper.active {
     right: 0;
@@ -745,79 +746,6 @@
 
   .main-content-container {
     padding: 67px 15px 15px;
-  }
-
-  .navbar-wrapper .mj-nav .navbar-brand {
-    margin-left: 0;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar {
-    background-color: whitesmoke !important;
-    position: fixed !important;
-    top: 0 !important;
-    right: -250px;
-    bottom: 0 !important;
-    background-color: #ffffff;
-    width: 250px;
-    display: block;
-    overflow: hidden;
-    height: 100%;
-    z-index: 1002;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar.active {
-    right: 0;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar ul {
-    background-color: whitesmoke !important;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar ul li {
-    margin-left: 0 !important;
-    padding: 0 !important;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar ul li a {
-    background-color: whitesmoke;
-    border-bottom: 1px solid #009dff;
-    border-radius: 0;
-    color: #009dff;
-    display: block;
-    font-size: 13px;
-    padding: 10px 15px;
-    width: 100%;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar ul li a:hover {
-    background-color: #009dff;
-    color: whitesmoke;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar ul li a.dropdown-toggle::after {
-    left: 10px;
-    top: 10px;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar ul li .dropdown-menu {
-    background-color: #009dff;
-    border-radius: 0;
-    position: static !important;
-    width: 100% !important;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar ul li .dropdown-menu a {
-    background-color: #009dff;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar ul li.mobile-brand {
-    border-bottom: 1px solid #009dff;
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar ul li.mobile-brand a {
-    padding: 20px 0;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar ul li.mobile-brand a:hover {
-    background-color: whitesmoke !important;
-  }
-  .navbar-wrapper .mj-nav #collapsibleNavbar ul li.mobile-brand img {
-    display: block;
-    margin: 0 auto;
-    width: 150px;
   }
 
   .footer .footer-a {
@@ -1069,6 +997,24 @@ button {
 }
 button:focus {
   outline: none !important;
+}
+
+#main-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  height: 100%;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 9;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+#main-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .bg-gray-100 {

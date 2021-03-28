@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    <form method="POST" action="{{ route('poors.update', [ 'poor' => $poor ]) }}" id="poor-form">
+    <form method="POST" action="{{ route('poors.update', [ 'poor' => $poor ]) }}">
         @csrf
         @method('PATCH')
 

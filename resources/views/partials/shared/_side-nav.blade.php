@@ -1,11 +1,11 @@
 <div class="admin-marketer-sidebar">
     <div class="admin-marketer-header">
-        <div class="row align-row">
+        <div class="row align-items-center">
             <div class="col-9">
                 <h3 class="mb-0 font-weight-normal">پنل مدیریت</h3>
             </div>
-            <div class="col-3 d-block d-md-none text-left">
-                
+            <div class="col-3 d-block d-lg-none text-left">
+                <span class="fa fa-bars" style="font-size:25px;cursor:pointer;" id="sidebar-toggler"></span>
             </div>
         </div>
     </div>

@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-use NonCashHelp;
-use Payment;
+use App\Models\NonCashHelp;
+use App\Models\Payment;
 
 class Poor extends Model
 {

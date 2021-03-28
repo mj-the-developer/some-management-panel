@@ -50,6 +50,23 @@ button {
     @include transition(all 0.4s);
 }
 
+#main-overlay {
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    height: 100%;
+    opacity: 0;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 9;
+    @include transition(all 0.4s);
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 .bg-gray-100 {
     background-image: url('../images/login-bg.jpg');
     background-position: left bottom;

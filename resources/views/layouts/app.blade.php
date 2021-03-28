@@ -18,6 +18,7 @@
     <body>
         <div class="container-fluid">
             @include('partials.shared._side-nav')
+            <div id="main-overlay"></div>
             
             <div class="main-content-container">
                 @if (session()->has('success'))

@@ -2,6 +2,18 @@ require('./bootstrap');
 
 require('alpinejs');
 
+// Toggle sidebar on tablet and mobile
+$(document).ready(function() {
+    $('#sidebar-toggler').on('click', function() {
+        $('#main-overlay').addClass('active');
+        $('.sidebar-wrapper').addClass('active');
+    });
+    $('#main-overlay').on('click', function() {
+        $('#main-overlay').removeClass('active');
+        $('.sidebar-wrapper').removeClass('active');
+    });
+});
+
 // insert commas as thousands separators
 function addCommas(n) {
     var rx = /(\d+)(\d{3})/;
@@ -38,7 +50,7 @@ function validDigits(n, dec) {
 }
 
 window.onload = function () {
-    let idsToMoneyFormat = ['monthly_need_amount','monthly_rent_amount','home_rent_amount','home_deposit_amount'];
+    let idsToMoneyFormat = ['monthly_need_amount','monthly_rent_amount','home_rent_amount','home_deposit_amount','amount'];
 
     idsToMoneyFormat.forEach(id => {
         var n1 = document.getElementById(id);
